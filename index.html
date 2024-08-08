@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Bài tập JS 5</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+
+        <!-- Bootstrap CSS v5.2.1 -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+            crossorigin="anonymous"
+        />
+    </head>
+
+    <body>
+        <h1 class="text-center p-5">Bài tập JS buổi 5</h1>
+
+        <div class="d-grid align-items-start justify-content-center">
+            <div
+                class="nav flex-column nav-pills me-3"
+                id="v-pills-tab"
+                role="tablist"
+                aria-orientation="vertical"
+            >
+                <button
+                    class="nav-link active"
+                    id="v-pills-home-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-bai1"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-home"
+                    aria-selected="true"
+                >
+                    Bài 1
+                </button>
+                <button
+                    class="nav-link"
+                    id="v-pills-profile-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-bai2"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-profile"
+                    aria-selected="false"
+                >
+                    Bài 2
+                </button>
+                <button
+                    class="nav-link"
+                    id="v-pills-messages-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-bai3"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-messages"
+                    aria-selected="false"
+                >
+                    Bài 3
+                </button>
+                <button
+                    class="nav-link"
+                    id="v-pills-settings-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#v-pills-bai4"
+                    type="button"
+                    role="tab"
+                    aria-controls="v-pills-settings"
+                    aria-selected="false"
+                >
+                    Bài 4
+                </button>
+            </div>
+            <div class="tab-content" id="v-pills-tabContent">
+                <div
+                    class="tab-pane fade show active"
+                    id="v-pills-bai1"
+                    role="tabpanel"
+                    aria-labelledby="v-pills-home-tab"
+                >
+                    <section>
+                        <div class="container">
+                            <div class="content w-80">
+                                <h2 class="m-4 p-3 bg-info">
+                                    Bài 1: Quản lí tuyển sinh
+                                </h2>
+                                <div class="form-floating mb-3">
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        name="formId1"
+                                        id="diemChuan"
+                                        placeholder=""
+                                    />
+                                    <label for="formId1">Điểm chuẩn</label>
+                                </div>
+                                <div class="form-floating mb-3">
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        name="formId1"
+                                        id="diem1"
+                                        placeholder=""
+                                    />
+                                    <label for="formId1">Điểm môn thứ 1</label>
+                                </div>
+                                <div class="form-floating mb-3">
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        name="formId1"
+                                        id="diem2"
+                                        placeholder=""
+                                    />
+                                    <label for="formId1">Điểm môn thứ 2</label>
+                                </div>
+                                <div class="form-floating mb-3">
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        name="formId1"
+                                        id="diem3"
+                                        placeholder=""
+                                    />
+                                    <label for="formId1">Điểm môn thứ 3</label>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="" class="form-label"
+                                        >Khu vực ưu tiên</label
+                                    >
+                                    <select
+                                        class="form-select form-select-lg"
+                                        name=""
+                                        id="khuVuc"
+                                    >
+                                        <option selected>Chọn khu vực</option>
+                                        <option value="2">A</option>
+                                        <option value="1">B</option>
+                                        <option value="0.5">C</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="" class="form-label"
+                                        >Đối tượng ưu tiên</label
+                                    >
+                                    <select
+                                        class="form-select form-select-lg"
+                                        name=""
+                                        id="doiTuong"
+                                    >
+                                        <option selected>Chọn đối tượng</option>
+                                        <option value="2.5">1</option>
+                                        <option value="1.5">2</option>
+                                        <option value="1">3</option>
+                                    </select>
+                                </div>
+
+                                <button
+                                    type="button"
+                                    class="btn btn-info"
+                                    id="tinhDiem"
+                                >
+                                    Kết Quả
+                                </button>
+                                <div>
+                                    <p
+                                        id="ketQua1"
+                                        class="m-4 p-4 bg-transparent"
+                                    ></p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <div
+                    class="tab-pane fade"
+                    id="v-pills-bai2"
+                    role="tabpanel"
+                    aria-labelledby="v-pills-profile-tab"
+                >
+                    <section>
+                        <div class="container">
+                            <div class="content w-80">
+                                <h2 class="m-4 p-3 bg-danger">
+                                    Bài 2: Tính tiền điện
+                                </h2>
+                                <div class="form-floating mb-3">
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        name="formId1"
+                                        id="hoTen"
+                                        placeholder=""
+                                    />
+                                    <label for="formId1">Họ tên</label>
+                                </div>
+                                <div class="form-floating mb-3">
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        name="formId1"
+                                        id="soKwh"
+                                        placeholder=""
+                                    />
+                                    <label for="formId1">Số KWh Điện</label>
+                                </div>
+
+                                <button
+                                    type="button"
+                                    class="btn btn-danger"
+                                    id="tinhTienDien"
+                                >
+                                    Kết Quả
+                                </button>
+                                <div>
+                                    <p
+                                        id="ketQua2"
+                                        class="m-4 p-4 bg-transparent text-white"
+                                    ></p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <div
+                    class="tab-pane fade"
+                    id="v-pills-bai3"
+                    role="tabpanel"
+                    aria-labelledby="v-pills-messages-tab"
+                >
+                    <section>
+                        <div class="container">
+                            <div class="content w-80">
+                                <h2 class="m-4 p-3 bg-warning">
+                                    Bài 3: Tính thuế thu nhập cá nhân
+                                </h2>
+                                <div class="form-floating mb-3">
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        name="formId1"
+                                        id="hoTen3"
+                                        placeholder=""
+                                    />
+                                    <label for="formId1">Họ tên</label>
+                                </div>
+                                <div class="form-floating mb-3">
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        name="formId1"
+                                        id="thuNhap"
+                                        placeholder=""
+                                    />
+                                    <label for="formId1">Thu nhập cả năm</label>
+                                </div>
+                                <div class="form-floating mb-3">
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        name="formId1"
+                                        id="soNguoi"
+                                        placeholder=""
+                                    />
+                                    <label for="formId1"
+                                        >Số người phụ thuộc</label
+                                    >
+                                </div>
+
+                                <button
+                                    type="button"
+                                    class="btn btn-warning"
+                                    id="tinhThue"
+                                >
+                                    Kết Quả
+                                </button>
+                                <div>
+                                    <p
+                                        id="ketQua3"
+                                        class="m-4 p-4 bg-transparent text-white"
+                                    ></p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <div
+                    class="tab-pane fade"
+                    id="v-pills-bai4"
+                    role="tabpanel"
+                    aria-labelledby="v-pills-settings-tab"
+                >
+                    <section>
+                        <div class="container">
+                            <div class="content w-80">
+                                <h2 class="m-4 p-3 alert alert-success">
+                                    Bài 4: Tính tiền Cáp
+                                </h2>
+
+                                <div class="mb-3">
+                                    <label for="" class="form-label"
+                                        >Chọn loại hình</label
+                                    >
+                                    <select
+                                        class="form-select form-select-lg"
+                                        name=""
+                                        id="user"
+                                        onchange="User(this.value)"
+                                    >
+                                        <option selected>Ai sử dụng</option>
+                                        <option value="1">Nhà Dân</option>
+                                        <option value="2">Doanh nghiệp</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-floating mb-3">
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        name="formId1"
+                                        id="id"
+                                        placeholder=""
+                                    />
+                                    <label for="formId1">Mã khách hàng</label>
+                                </div>
+                                <div class="form-floating mb-3">
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        name="formId1"
+                                        id="soKenh"
+                                        placeholder=""
+                                    />
+                                    <label for="formId1">Số kênh cao cấp</label>
+                                </div>
+                                <div class="form-floating mb-3">
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        name="formId1"
+                                        id="soKetNoi"
+                                        placeholder=""
+                                    />
+                                    <label for="formId1" id="soKet"
+                                        >Số kết nối</label
+                                    >
+                                </div>
+
+                                <button
+                                    type="button"
+                                    class="btn btn-success text-center"
+                                    id="tinhTienCap"
+                                    style="margin-left: 120px"
+                                >
+                                    Kết Quả
+                                </button>
+                                <div>
+                                    <p
+                                        id="ketQua4"
+                                        class="m-4 p-4 text-white bg-transparent"
+                                    ></p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bootstrap JavaScript Libraries -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+            crossorigin="anonymous"
+        ></script>
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+            integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+            crossorigin="anonymous"
+        ></script>
+        <script src="./main.js"></script>
+    </body>
+</html>
